@@ -9,3 +9,6 @@ check dagshub is working on not by run this code >
 
  Now my mlflow is working 
  
+first we are doing the random experiment or we can say that the baseline_model 
+After that we are checking all the model with bow and tdf like logistics model with both bow vs tfidf similarly with all the model
+After that those who gives the best accuracy we choose that model 
