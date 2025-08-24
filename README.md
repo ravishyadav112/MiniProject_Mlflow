@@ -25,3 +25,7 @@ Initially we store the data in temp file After that we store the data in aws s3
 dvc remote add -d myremote C:\Users\ASUS\AppData\Local\Temp
 
 DVC Pipeline -> Data ingestion -> Data preprocessing -> Feature enginnering -> model Building-> evaluation
+
+C0oJc1AHJxcxVjH6DHpVKWQa+TFzGQfw2JKvnQ2f
+
+
