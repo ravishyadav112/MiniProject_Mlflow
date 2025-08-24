@@ -88,4 +88,20 @@ target/
 # Mypy cache
 .mypy_cache/
  myenv
- models
+ models/
+ notebooks/Base_Model
+ notebooks/Best_Logistics_Model
+ reports/
+ reports/Best_Logistics_regression_Model
+
+ # MLflow
+mlruns/
+mlartifacts/
+
+# Serialized objects
+*.pkl
+
+# MacOS / Editor junk
+.DS_Store
+*.swp
+*.swo

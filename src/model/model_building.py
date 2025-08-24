@@ -6,6 +6,7 @@ import pickle
 from sklearn.linear_model import LogisticRegression
 import yaml
 import logging
+import os
 
 # logging configuration
 logger = logging.getLogger('model_building')
@@ -51,6 +52,7 @@ def train_model(X_train: np.ndarray, y_train: np.ndarray) -> LogisticRegression:
 def save_model(model, file_path: str) -> None:
     """Save the trained model to a file."""
     try:
+        os.makedirs(os.path.dirname(file_path), exist_ok=True)
         with open(file_path, 'wb') as file:
             pickle.dump(model, file)
         logger.debug('Model saved to %s', file_path)
@@ -67,7 +69,7 @@ def main():
 
         clf = train_model(X_train, y_train)
         
-        save_model(clf, 'models/model.pkl')
+        save_model(clf, 'models/Best_Model/model.pkl')
     except Exception as e:
         logger.error('Failed to complete the model building process: %s', e)
         print(f"Error: {e}")

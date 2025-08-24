@@ -152,7 +152,7 @@ with mlflow.start_run():
 
     # Log model
     
-    model_dir = "notebooks/Best_Logistics_Model"
+    model_dir = "Best_Logistics_Model"
     if os.path.exists(model_dir):
         shutil.rmtree(model_dir)
 
