@@ -1,4 +1,4 @@
 [core]
-    remote = myremote
-['remote "myremote"']
-    url = s3://mlflow-miniproject//dvc-data
+    remote = s3remote
+['remote "s3remote"']
+    url = s3://dvcbucketminiproject
