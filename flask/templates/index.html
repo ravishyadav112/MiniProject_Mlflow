@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emotion Detector</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="analyzer-container">
+    <div class="header-section">
+      <h1 class="app-title">Emotion Detector</h1>
+      <p class="subtitle">Discover the emotion in your text</p>
+    </div>
+
+    <form class="input-section" method="POST" action="/predict">
+      <label class="input-label" for="userText">Enter your text:</label>
+      <textarea 
+        id="userText" 
+        name="text"
+        class="text-input" 
+        placeholder="Type something here and I'll tell you if it's happy or sad..."
+        required
+      ></textarea>
+      <button type="submit" class="analyze-btn">Analyze Emotion</button>
+    </form>
+
+    <div class="result-container {% if result %}{{ result.class }}{% endif %}">
+      {% if result is not none %}
+        {% if result == 1 %}
+            <h2 class="result-text">😊 Happy</h2>
+        {% else %}
+            <h2 class="result-text">😔 Sad</h2>
+        {% endif %}
+      {% endif %}
+    </div>
+  </div>
+</body>
+</html>
