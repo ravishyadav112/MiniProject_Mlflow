@@ -40,9 +40,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def dashboard():
-    result = session.pop("result", None)   # ✅ clear after showing once
-    text = session.pop("text", "")         # ✅ clear text after refresh
-    return render_template("index.html", result=result, text=text)
+    return render_template("index.html",result = None , text = "")
 
 @app.route('/predict' , methods = ["POST"])
 def analyse():
@@ -63,12 +61,10 @@ def analyse():
     ##predict the data
     result = model.predict(features_df)
 
-    # ✅ store in session
-    session["result"] = int(result[0])
-    session["text"] = text
+
 
    
-    return redirect(url_for("dashboard"))
+    return render_template("index.html", result=int(result[0]), text=text)
 
 
 
