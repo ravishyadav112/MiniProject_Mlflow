@@ -28,7 +28,7 @@ def get_latest_model_version(model_name):
         latest_version = client.get_latest_versions(model_name, stages=["None"])
     return latest_version[0].version if latest_version else None
 
-model_name = "models"
+model_name = "my_model"
 model_version = get_latest_model_version(model_name)
 
 model_uri = f'models:/{model_name}/{model_version}'

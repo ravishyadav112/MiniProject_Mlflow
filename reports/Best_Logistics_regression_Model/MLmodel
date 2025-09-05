@@ -13,7 +13,7 @@ flavors:
     serialization_format: pickle
     sklearn_version: 1.7.1
 mlflow_version: 2.21.2
-model_size_bytes: 44717
-model_uuid: f1e40226020747bdbecc5b6451b41ae1
+model_size_bytes: 40717
+model_uuid: 7009a435432c40cabc03a52bbd8a94c5
 prompts: null
-utc_time_created: '2025-09-01 00:35:36.463512'
+utc_time_created: '2025-09-05 11:08:10.830459'

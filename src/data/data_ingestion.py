@@ -24,7 +24,7 @@ logger.addHandler(console_handler)
 logger.addHandler(file_handler)
 
 def load_params(params_path: str) -> dict:
-    """Load parameters from a YAML file."""
+    """Load parameters from a YAML file.   """
     try:
         with open(params_path, 'r') as file:
             params = yaml.safe_load(file)

@@ -147,19 +147,7 @@ def main():
             # mlflow.sklearn.log_model(clf, "model") //Not working
             # Log model
     
-            model_dir = "reports/Best_Logistics_regression_Model"
-            if os.path.exists(model_dir):
-                shutil.rmtree(model_dir)
-
-            # Save the model in MLflow’s standard format
-            mlflow.sklearn.save_model(
-                sk_model=clf,
-                path=model_dir,
-                serialization_format=mlflow.sklearn.SERIALIZATION_FORMAT_PICKLE,
-            )
-
-            # Log the complete model folder (MLmodel + model.pkl + requirements)
-            mlflow.log_artifacts(model_dir, artifact_path="Best_Logistics_regression_Model")
+            mlflow.sklearn.log_model(clf, "model")
             
             # Save model info
             save_model_info(run.info.run_id, 'reports/model_info.json' , "models")
