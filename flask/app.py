@@ -5,6 +5,7 @@ from preprocessing_utility import normalize_text
 import os
 import pandas as pd
 
+
 # Get token from environment
 token = os.getenv("DAGSHUB_PAT")
 if not token:
@@ -33,6 +34,10 @@ model_version = get_latest_model_version(model_name)
 
 model_uri = f'models:/{model_name}/{model_version}'
 model = mlflow.pyfunc.load_model(model_uri)
+
+
+model_name = "my_model"
+
 
 vectorizer = pickle.load(open('models/vectorizer.pkl','rb'))
 
