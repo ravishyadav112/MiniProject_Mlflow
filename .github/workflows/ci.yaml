@@ -48,13 +48,15 @@ jobs:
       - name: Tag Docker image
         if: success()
         run: |
-          docker tag emotion_detection:latest 051826734860.dkr.ecr.ap-south-1.amazonaws.com/emotion_detection:latest
+          docker tag emotion_detection:latest  717279703749.dkr.ecr.ap-south-1.amazonaws.com/emotion_detection:latest
+
 
 
       - name: Push Docker image to AWS ECR
         if: success()
         run: |
-          docker push 051826734860.dkr.ecr.ap-south-1.amazonaws.com/emotion_detection:latest
+          docker push  717279703749.dkr.ecr.ap-south-1.amazonaws.com/emotion_detection:latest
+
 
       # # Zip the required files
       # - name: Zip files for deployment
